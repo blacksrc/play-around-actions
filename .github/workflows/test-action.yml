@@ -1,12 +1,15 @@
-name: test-my-action
+name: hello-action
 on: [push]
 jobs:
   check-node-version:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ "Siamak", "Atefeh" ]
+    name: Hello ${{ matrix.node }}
     steps: 
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with: 
           node-version: '16'
-      - run: echo 'This is the node version'
-      - run: node -v
+      - run: echo 'Hello dear ${{ matrix.node }}'
