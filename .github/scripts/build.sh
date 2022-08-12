@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Building stuff..."
+echo "Building stuff...."
