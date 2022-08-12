@@ -14,5 +14,5 @@ jobs:
           node-version: '16'
       - run: echo 'Hello dear ${{ matrix.node }}'
       - name: Run build script
-        run: sh "bash ./.github/scripts/build.sh" 
+        run: sh .github/scripts/build.sh 
         shell: bash
