@@ -13,6 +13,6 @@ jobs:
         with: 
           node-version: '16'
       - run: echo 'Hello dear ${{ matrix.node }}'
-      - run: node & console.log("Said hello to " + "something")
-        env: 
-          PERSON_NAME: ${{ matrix.node }}
+      - name: Run build script
+        run: ./.github/scripts/build.sh
+        shell: bash
