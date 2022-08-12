@@ -13,3 +13,6 @@ jobs:
         with: 
           node-version: '16'
       - run: echo 'Hello dear ${{ matrix.node }}'
+      - run: node & console.log("Said hello to " + process.env.PERSON_NAME)
+        env: 
+          PERSON_NAME: ${{ matrix.node }}
