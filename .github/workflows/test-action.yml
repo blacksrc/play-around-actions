@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ "Siamak", "Atefeh" ]
+        node: [ "Siamak", "Atefeh", "Hedieh" ]
     name: Hello ${{ matrix.node }}
     steps: 
       - uses: actions/checkout@v3
